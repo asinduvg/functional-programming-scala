@@ -1,0 +1,10 @@
+object Movie extends App {
+  
+  def numberOfAttendees(ticketPrice: Int): Int = 120 + (15 - ticketPrice) * 20 / 5
+  def revenue(ticketPrice: Int): Int = numberOfAttendees(ticketPrice) * ticketPrice
+  def cost(ticketPrice: Int): Int = 500 + (3 * numberOfAttendees(ticketPrice))
+  def profit(ticketPrice: Int): Int = revenue(ticketPrice) - cost(ticketPrice)
+
+  println(s"The profit with the entered ticket price is: ${profit(25)}")
+
+}
